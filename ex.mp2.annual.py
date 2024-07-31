@@ -20,7 +20,7 @@ import os
 import argparse
 
 root='/lustre/scratch5/zjrobbins/E3SM/scratch/'
-nameofthing='IMAPtester2.IELMFATES'
+nameofthing='IMAPtesterLFM.IELMFATES'
 outputfolder="IMAP_tester"   # idk
 
 
@@ -69,10 +69,9 @@ var=['FATES_GPP','QVEGE','QVEGT','QSOIL','QRUNOFF','H2OSOI','FATES_LEAF_H2OPOT_S
 Monthset=["01","02","03","04","05","06","07","08","09","10","11","12"]
 Finishedblock=pd.DataFrame([])
 Missing=[]
-if rank ==1:
-	if os.path.isdir(outdir):
+if os.path.isdir(outdir):
 		print("Exists")
-	else:
+else:
 		print("Doesn't exists")
 		os.mkdir(outdir)
 #print(wdir+"/run/"+wdir+"."+str(Case)+".elm.h0."+str(args.Yeare)+"-12.nc")

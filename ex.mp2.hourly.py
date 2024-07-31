@@ -59,7 +59,7 @@ print('Computing using rank {} of {}'.format(rank, totalprocs))
 outdir=outdir
 Case=int(args.start)+int(rank)
 print(Case)
-wdir=runroot+"."+str(Case)
+wdir=runroot
 print(wdir)
 
 
@@ -72,22 +72,22 @@ var=['FATES_LEAF_H2OPOT_SZPF']
 Monthset=["01","02","03","04","05","06","07","08","09","10","11","12"]
 Finishedblock=pd.DataFrame([])
 Missing=[]
-if rank ==1:
-	if os.path.isdir(outdir):
+#if rank ==1:
+if os.path.isdir(outdir):
 		print("Exists")
-	else:
+else:
 		print("Doesn't exists")
 		os.mkdir(outdir)
 #print(wdir+"/run/"+wdir+"."+str(Case)+".elm.h0."+str(args.Yeare)+"-12.nc")
 
 #print(wdir+"/run/"+nameofthing+"."+str(Case)+".elm.h1."+str(args.Yeare)+"-01.nc")
-if path.exists(wdir+"/run/"+nameofthing+"."+str(Case)+".elm.h1."+str(args.Yeare)+"-01-01-00000.nc")==True:
+if path.exists(wdir+"/run/"+nameofthing+".elm.h1."+str(args.Yeare)+"-01-01-00000.nc")==True:
 	for Year in Yearset:
 		Year=str(Year)
 		print(Year)
 #		for month in Monthset:
 	        #print(month)
-		data_path=wdir+"/run/"+nameofthing+"."+str(Case)+".elm.h1."+Year+"-01-01-00000.nc"
+		data_path=wdir+"/run/"+nameofthing+".elm.h1."+Year+"-01-01-00000.nc"
 		print(data_path)
 		Fileblock=xr.open_dataset(data_path)
 		Template=pd.DataFrame({'Date':Fileblock.coords['time'].values,'Model':Case})
@@ -149,7 +149,7 @@ if path.exists(wdir+"/run/"+nameofthing+"."+str(Case)+".elm.h1."+str(args.Yeare)
 					Template=Template.merge(T2,on="Date")
 		Finishedblock=pd.concat([Finishedblock,Template]) 
 #		print(Finishedblock)
-	print(outdir+"/"+nameofthing+str(Case)+".csv")
-	Finishedblock.to_csv(outdir+"/"+nameofthing+str(Case)+"h1.csv")
+	print(outdir+"/"+nameofthing+".csv")
+	Finishedblock.to_csv(outdir+"/"+nameofthing+"h1.csv")
 else:
     print("Missing"+wdir+str(Case)) 

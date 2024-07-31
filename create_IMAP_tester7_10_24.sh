@@ -9,7 +9,7 @@
 # USER MAY ALSO WANT TO ADJUST XML CHANGES, AND NAMELIST ARGUMENTS
 # =====================================================================================
 export user=zjrobbins
-export TAG='IMAPtester2'                               # User defined tag to differentiate runs
+export TAG='IMAPtesterLFM'                               # User defined tag to differentiate runs
 export COMPSET=IELMFATES                                  # Compset (probably ICLM45ED or ICLM50ED)
 export MAC=chicoma                                        # Name your machine
 export COMPILER=gnu                                       # Name your compiler
@@ -92,12 +92,12 @@ cd ${CASEROOT}/${CASE_NAME}
 # =================================================================================
 ./xmlchange PIO_VERSION=2
 ./xmlchange --file env_build.xml --id DEBUG --val FALSE
-./xmlchange --file env_run.xml --id STOP_N --val 20
-./xmlchange --file env_run.xml --id RUN_STARTDATE --val '2002-01-01'
+./xmlchange --file env_run.xml --id STOP_N --val 6
+./xmlchange --file env_run.xml --id RUN_STARTDATE --val '2010-01-01'
 ./xmlchange --file env_run.xml --id STOP_OPTION --val nyears
 ./xmlchange --file env_run.xml --id REST_N --val 1
-./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_START --val 2002
-./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_END --val 2022
+./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_START --val 2010
+./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_END --val 2016
 
 
 # MACHINE SPECIFIC, AND/OR USER PREFERENCE CHANGES (USERS WILL CHANGE THESE)

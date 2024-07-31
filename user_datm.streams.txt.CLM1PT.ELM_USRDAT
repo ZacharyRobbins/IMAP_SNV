@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<file id="stream" version="1.0">
+<dataSource>
+   GENERIC
+</dataSource>
+<domainInfo>
+  <variableNames>
+     time    time
+        xc      lon
+        yc      lat
+        area    area
+        mask    mask
+  </variableNames>
+  <filePath>
+     /lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs
+  </filePath>
+  <fileNames>
+     domain_SNV.nc
+  </fileNames>
+</domainInfo>
+<fieldInfo>
+   <variableNames>
+     ZBOT     z
+        TBOT     tbot
+        RH       rh
+        WIND     wind
+        PRECTmms precn
+        FSDS     swdn
+        PSRF     pbot
+        FLDS     lwdn
+   </variableNames>
+   <filePath>
+     /lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/FATES_Sierra/
+   </filePath>
+   <fileNames>
+    2002-01.nc
+2002-02.nc
+2002-03.nc
+2002-04.nc
+2002-05.nc
+2002-06.nc
+2002-07.nc
+2002-08.nc
+2002-09.nc
+2002-10.nc
+2002-11.nc
+2002-12.nc
+2003-01.nc
+2003-02.nc
+2003-03.nc
+2003-04.nc
+2003-05.nc
+2003-06.nc
+2003-07.nc
+2003-08.nc
+2003-09.nc
+2003-10.nc
+2003-11.nc
+2003-12.nc
+   </fileNames>
+   <offset>
+      0
+   </offset>
+</fieldInfo>
+</file>
