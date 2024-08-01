@@ -148,7 +148,7 @@ EOF
 
 # HERE WE NEED TO MODIFY THE STREAM FILE (DANGER ZONE - USERS BEWARE CHANGING)
 ./preview_namelists
-cp /lustre/scratch5/.mdt1/${user}/E3SM/scratch/${CASE_NAME}/run/datm.streams.txt.CLM1PT.ELM_USRDAT user_datm.streams.txt.CLM1PT.ELM_USRDAT
+cp /lustre/scratch5/.mdt1/${user}/E3SM_run/scratch/${CASE_NAME}/run/datm.streams.txt.CLM1PT.ELM_USRDAT user_datm.streams.txt.CLM1PT.ELM_USRDAT
 #`sed -i '/FLDS/d' user_datm.streams.txt.CLM1PT.ELM_USRDAT`
 `sed -i 's|/CLM1PT_data|4cl_C1/SANGRE1_Clim|' user_datm.streams.txt.CLM1PT.ELM_USRDAT`
 

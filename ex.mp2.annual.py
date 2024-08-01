@@ -19,9 +19,9 @@ from os import path
 import os
 import argparse
 
-root='/lustre/scratch5/zjrobbins/E3SM/scratch/'
-nameofthing='IMAPtesterLFM.IELMFATES'
-outputfolder="IMAP_tester"   # idk
+root='/lustre/scratch5/zjrobbins/E3SM_run/scratch/'
+nameofthing='IMAPtesterother.IELMFATES'
+outputfolder="IMAP_tester2"   # idk
 
 
 parser = argparse.ArgumentParser(description=__doc__,
