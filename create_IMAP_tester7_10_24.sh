@@ -9,7 +9,7 @@
 # USER MAY ALSO WANT TO ADJUST XML CHANGES, AND NAMELIST ARGUMENTS
 # =====================================================================================
 export user=zjrobbins
-export TAG='IMAPtesterother'                               # User defined tag to differentiate runs
+export TAG='IMAPtest4'                               # User defined tag to differentiate runs
 export COMPSET=IELMFATES                                  # Compset (probably ICLM45ED or ICLM50ED)
 export MAC=chicoma                                        # Name your machine
 export COMPILER=gnu                                       # Name your compiler
@@ -21,7 +21,7 @@ export DIN_LOC_ROOT=/usr/projects/cesm/input_data              #location of exte
 export CLM_USRDAT_DOMAIN=domain_SNV.nc       # Name of domain file in  $DATA_DIR/params/
 export CLM_USRDAT_SURDAT=Sierrasurf.nc # Name of surface file in $DATA_DIR/params/
 #export ACME_ROOT=/lustre/scratch5/.mdt1/zjrobbins/API25_2/E3SM
-export ACME_ROOT=/usr/projects/veg/E3SM/
+export ACME_ROOT=/lustre/scratch5/.mdt1/zjrobbins/ACME_2023/E3SM/
 
 
 # DEPENDENT PATHS AND VARIABLES (USER MIGHT CHANGE THESE..)
@@ -43,7 +43,7 @@ export CASE_NAME=${TAG}.${COMPSET}
 # REMOVE EXISTING CASE IF PRESENT
 rm -r ${CASEROOT}/${CASE_NAME}
 # CREATE THE CASE
-/usr/projects/veg/E3SM/cime/scripts/create_newcase -case ${CASEROOT}/${CASE_NAME} -res ${RES} -compset ${COMPSET} -mach ${MAC} -project ${FUNDING} -compiler ${COMPILER} -mpilib="mpi-serial"
+/lustre/scratch5/.mdt1/zjrobbins/ACME_2023/E3SM/cime/scripts/create_newcase -case ${CASEROOT}/${CASE_NAME} -res ${RES} -compset ${COMPSET} -mach ${MAC} -project ${FUNDING} -compiler ${COMPILER} -mpilib="mpi-serial"
 
 cd ${CASEROOT}/${CASE_NAME} 
 
