@@ -19,9 +19,10 @@ from os import path
 import os
 import argparse
 
-root='/lustre/scratch5/zjrobbins/E3SM_run/scratch/'
-nameofthing='IMAPtesterother.IELMFATES'
-outputfolder="IMAP_tester2"   # idk
+root='/lustre/scratch5/.mdt1/zjrobbins/E3SM/scratch/' 
+nameofthing='IMAP_SNV911.IELMFATES'
+outputfolder="IMAP_Eglin"   # idk
+
 
 
 parser = argparse.ArgumentParser(description=__doc__,
@@ -64,8 +65,10 @@ mod='h0'
 Yearset=list(range(int(args.Years),int(args.Yeare)+2))
 #var=['FATES_LEAF_H2OPOT_SZPF','FATES_STOMATAL_COND_AP']
 #var=['FATES_GPP','QVEGE','QVEGT','QSOIL','QRUNOFF','H2OSOI']
-var=['FATES_GPP','QVEGE','QVEGT','QSOIL','QRUNOFF','H2OSOI','FATES_LEAF_H2OPOT_SZPF',
+var=['FATES_BTRAN_SZPF','FATES_GPP','QVEGE','Eggs','IMAP_Larvae_1','QVEGT','QSOIL','QRUNOFF','H2OSOI','FATES_LEAF_H2OPOT_SZPF',
 	'FATES_SAPFLOW','FATES_STEM_CONDFRAC_SZPF','FATES_TRANSROOT_CONDFRAC_SZPF'] #,'FATES_STEM_H2OPOT_SZPF']
+var=["RAIN",'BTRAN','FATES_AUTORESP','FATES_GROWTH_RESP','FATES_MAINT_RESP','FATES_EXCESS_RESP','FATES_NPP','H2OSOI','FATES_LAI_AP','FATES_STOREC','FATES_STOMATAL_COND',"FATES_VEGC_ABOVEGROUND",'FATES_VEGC','FATES_MORTALITY_HYDRAULIC_SZPF','FATES_MORTALITY_CSTARV_SZPF','FATES_GPP','QVEGE','QVEGT','QSOIL']
+
 Monthset=["01","02","03","04","05","06","07","08","09","10","11","12"]
 Finishedblock=pd.DataFrame([])
 Missing=[]

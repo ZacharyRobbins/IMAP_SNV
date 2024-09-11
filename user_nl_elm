@@ -16,3 +16,17 @@ hist_fincl1='TLAI','TSOI_10CM','FATES_AUTORESP','FATES_HET_RESP','QRUNOFF','QVEG
 hist_fincl2='FATES_LEAF_H2OPOT_SZPF','FATES_SAPFLOW'
 hist_nhtfrq= -24,-3
 hist_mfilt= 365,2920
+fsurdat = '/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/Sierrasurf.nc'
+fates_paramfile = '/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/params/LFM_top_ten_1.nc'
+use_fates_inventory_init = .true.
+
+fates_inventory_ctrl_filename = '/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/Sierra_inv_file.txt'
+!fates_spitfire_mode= 1
+hist_empty_htapes = .false.
+fsurdat = '/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/Sierrasurf.nc'
+fates_paramfile = '/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/params/LFM_top_ten_1.nc'
+use_fates_inventory_init = .true.
+
+fates_inventory_ctrl_filename = '/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/Sierra_inv_file.txt'
+!fates_spitfire_mode= 1
+hist_empty_htapes = .false.

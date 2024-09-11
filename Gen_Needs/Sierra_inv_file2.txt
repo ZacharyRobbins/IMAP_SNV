@@ -1,0 +1,2 @@
+LATITUDE LONGITUDE PSS-FILE CSS-FILE
+1 30.547183 273.360949  /lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/Sierra_FIA12.pss   /lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV/Gen_Needs/Sierra_FIA12.css

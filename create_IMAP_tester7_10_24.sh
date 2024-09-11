@@ -9,7 +9,7 @@
 # USER MAY ALSO WANT TO ADJUST XML CHANGES, AND NAMELIST ARGUMENTS
 # =====================================================================================
 export user=zjrobbins
-export TAG='IMAPtest4'                               # User defined tag to differentiate runs
+export TAG='IMAP_SNV911'                               # User defined tag to differentiate runs
 export COMPSET=IELMFATES                                  # Compset (probably ICLM45ED or ICLM50ED)
 export MAC=chicoma                                        # Name your machine
 export COMPILER=gnu                                       # Name your compiler
@@ -95,11 +95,11 @@ cd ${CASEROOT}/${CASE_NAME}
 # =================================================================================
 ./xmlchange PIO_VERSION=2
 ./xmlchange --file env_build.xml --id DEBUG --val FALSE
-./xmlchange --file env_run.xml --id STOP_N --val 6
+./xmlchange --file env_run.xml --id STOP_N --val 26
 ./xmlchange --file env_run.xml --id RUN_STARTDATE --val '2010-01-01'
 ./xmlchange --file env_run.xml --id STOP_OPTION --val nyears
 ./xmlchange --file env_run.xml --id REST_N --val 1
-./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_START --val 2010
+./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_START --val 1990
 ./xmlchange --file env_run.xml --id DATM_CLMNCEP_YR_END --val 2016
 
 
@@ -120,11 +120,6 @@ cd ${CASEROOT}/${CASE_NAME}
 cat >> user_nl_elm <<EOF
 fsurdat = '${CLM_SURFDAT_DIR}/${CLM_USRDAT_SURDAT}'
 fates_paramfile = '${FATES_PARAM_DIR}/${FATES_PARAM}'
-use_fates_nocomp = .true.
-hist_empty_htapes = .false.
-use_fates_planthydro = .true.
-use_var_soil_thick = .false.
-use_fates_ed_st3 = .true.
 use_fates_inventory_init = .true.
 
 fates_inventory_ctrl_filename = '${CLM_SURFDAT_DIR}/Sierra_inv_file.txt'

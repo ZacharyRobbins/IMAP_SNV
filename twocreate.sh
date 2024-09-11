@@ -9,17 +9,17 @@
 # USER MAY ALSO WANT TO ADJUST XML CHANGES, AND NAMELIST ARGUMENTS
 # =====================================================================================
 export user=zjrobbins
-export TAG='IMAPtesterother'                               # User defined tag to differentiate runs
+export TAG='IMAP_SNV_Eglin'                               # User defined tag to differentiate runs
 export COMPSET=IELMFATES                                  # Compset (probably ICLM45ED or ICLM50ED)
 export MAC=chicoma                                        # Name your machine
 export COMPILER=gnu                                       # Name your compiler
 export FUNDING=t24_forecast
 export FATES_PARAM=LFM_top_ten_1.nc                       # Name of FATES parameter file in S_CA_FATES/params/
 export SITE_BASE_DIR=/lustre/scratch5/.mdt1/zjrobbins/E3SM_cases/   # Where is the site folder located? (SITE_NAME)
-export DATA_DIR=/lustre/scratch5/.mdt1/zjrobbins/IMAP_SNV           # Where are the parameter and climate drivers located.
+export DATA_DIR=/lustre/scratch5/.mdt1/zjrobbins/FATES-DRM/            # Where are the parameter and climate drivers located.
 export DIN_LOC_ROOT=/usr/projects/cesm/input_data              #location of external input data, YOU will need access to veg. 
-export CLM_USRDAT_DOMAIN=domain_SNV.nc       # Name of domain file in  $DATA_DIR/params/
-export CLM_USRDAT_SURDAT=Sierrasurf.nc # Name of surface file in $DATA_DIR/params/
+export CLM_USRDAT_DOMAIN=domain_eglin_c210813.nc       # Name of domain file in  $DATA_DIR/params/
+export CLM_USRDAT_SURDAT=surfdata_eglin_c210813.nc  # Name of surface file in $DATA_DIR/params/
 #export ACME_ROOT=/lustre/scratch5/.mdt1/zjrobbins/API25_2/E3SM
 export ACME_ROOT=/usr/projects/veg/E3SM/
 
@@ -27,8 +27,8 @@ export ACME_ROOT=/usr/projects/veg/E3SM/
 # DEPENDENT PATHS AND VARIABLES (USER MIGHT CHANGE THESE..)
 # =======================================================================================
 export CASEROOT=${SITE_BASE_DIR}                               # Where the build is generated (probably on scratch partition)
-export CLM_SURFDAT_DIR=${DATA_DIR}/Gen_Needs
-export CLM_DOMAIN_DIR=${DATA_DIR}/Gen_Needs
+export CLM_SURFDAT_DIR=${DATA_DIR}/Gen_needs
+export CLM_DOMAIN_DIR=${DATA_DIR}/Gen_needs
 export FATES_PARAM_DIR=${DATA_DIR}/params #location of FATES paameter files
 export DIN_LOC_ROOT_FORCE=${DATA_DIR}/FATES_Sierra  #location of climate forcing, not including the SITE_NAMES
 export CLM_HASH=`cd ${ACME_ROOT}/components/elm/;git log -n 1 --pretty=%h`
